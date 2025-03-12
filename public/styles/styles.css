@@ -1,0 +1,45 @@
+body {
+    background-color: #f9b0dc;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(227, 80, 134);
+}
+
+.btn-primary {
+    background-color: violet; 
+    border-color: violet;
+}
+
+.btn-primary:hover {
+    background-color: darkviolet; 
+    border-color: darkviolet;
+}
+.btn-secondary {
+    background-color: violet; 
+    border-color: violet;
+}
+
+.card {
+    background-color: rgb(241, 158, 216); 
+    border-radius: 15px; 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pokemon-img {
+    max-width: 100px;
+}
+
+.pokemon-details-img {
+    max-width: 200px;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
+}
