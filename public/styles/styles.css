@@ -13,8 +13,8 @@ h1 {
 }
 
 .btn-primary:hover {
-    background-color: darkviolet; 
-    border-color: darkviolet;
+    background-color: rgb(0, 255, 81);
+    border-color: rgb(0, 255, 81);
 }
 .btn-secondary {
     background-color: violet; 
@@ -43,3 +43,4 @@ h1 {
 .btn {
     margin: 5px;
 }
+

@@ -8,6 +8,14 @@
     <link href="/styles/styles.css" rel="stylesheet">
 </head>
 <body>
+    <form action="/pokemon" method="GET" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="nimi" class="form-control" placeholder="Syötä Pokemonin nimi" required>
+            <button type="submit" class="btn btn-primary">Hae</button>
+        </div>
+    </form>
+    <%- include('header') %>
+    
     <div class="container">
         <h1 class="my-4"><%= pokemon.name %></h1>
         <img src="<%= pokemon.sprites.front_default %>" class="pokemon-details-img" alt="<%= pokemon.name %>">
@@ -15,15 +23,12 @@
         <p><strong>Korkeus:</strong> <%= pokemon.height %></p>
 
         <h2 class="mt-4">Pokemonin statsit</h2>
-
+        <ul>
             <% stats.forEach(stat => { %>
-                <li class="list-group-item"><strong><%= stat.name %>:</strong> <%= stat.value %></li>
+                <li><strong><%= stat.name %>:</strong> <%= stat.value %></li>
             <% }); %>
-
-            
-
-
-        <a href="/" class="btn btn-primary mt-3">Takaisin etusivulle</a>
+        </ul>
     </div>
+    <%- include('footer') %>
 </body>
 </html>

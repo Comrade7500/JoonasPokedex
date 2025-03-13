@@ -8,13 +8,24 @@
     <link href="/styles/styles.css" rel="stylesheet">
 </head>
 <body>
+    <%- include('header') %>
     <div class="container">
         <h1 class="my-4">Pokemon sukupolvet</h1>
+        
+
+        <form action="/pokemon" method="GET" class="mb-4">
+            <div class="input-group">
+                <input type="text" name="nimi" class="form-control" placeholder="Syötä Pokemonin nimi" required>
+                <button type="submit" class="btn btn-primary">Hae</button>
+            </div>
+        </form>
+
         <div class="d-grid gap-2">
             <% for (let i = 1; i <= 9; i++) { %>
                 <a href="/sukupolvi/<%= i %>" class="btn btn-primary btn-lg">Sukupolvi <%= i %></a>
             <% } %>
         </div>
     </div>
+    <%- include('footer') %>
 </body>
 </html>

@@ -8,6 +8,14 @@
     <link href="/styles/styles.css" rel="stylesheet">
 </head>
 <body>
+    <form action="/pokemon" method="GET" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="nimi" class="form-control" placeholder="Syötä Pokemonin nimi" required>
+            <button type="submit" class="btn btn-primary">Hae</button>
+        </div>
+    </form>
+    <%- include('header') %>
+    
     <div class="container">
         <h1 class="my-4">Sukupolvi <%= numero %> Pokemonit</h1>
         <div class="row">
@@ -15,7 +23,7 @@
                 <% if (pokemon) { %>
                     <div class="col-md-3 pokemon-card">
                         <div class="card">
-                            <img src="<%= pokemon.sprites.front_default %>" class="card-img-top pokemon-img" alt="<%= pokemon.name %>">
+                            <img src="<%= pokemon.sprites.front_default %>" class="card-img-top" alt="<%= pokemon.name %>">
                             <div class="card-body">
                                 <h5 class="card-title"><%= pokemon.name %></h5>
                                 <a href="/pokemon/<%= pokemon.name %>" class="btn btn-primary">Näytä tiedot</a>
@@ -25,7 +33,7 @@
                 <% } %>
             <% }) %>
         </div>
-        <a href="/" class="btn btn-secondary mt-4">Takaisin</a>
     </div>
+    <%- include('footer') %>
 </body>
 </html>
