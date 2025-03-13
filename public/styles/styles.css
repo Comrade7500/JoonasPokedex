@@ -3,6 +3,10 @@ body {
     padding: 20px;
 }
 
+li {
+    list-style: none;
+}
+
 h1 {
     color: rgb(227, 80, 134);
 }
